@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<head>
+	<title>MiniMaps Input Form</title>
+</head>
+
+<body>
+<h1>Input Form for MiniMaps</h1>
+<form name="Form" action="return.html" method="post">
+    
+<div id="initial">
+    <input type="radio" name="form" value="1" onchange="return initial_chosen()" checked="checked">Infrastructure<br>
+    <input type="radio" name="form" value="2" onchange="return initial_chosen()">Counter<br>
+</div>
+
+<div id="infrastructure">
+	<div id="basic">
+        Type of Infrastructure:<br>
+        <input type="radio" name="ii_type" onchange="return ii_chosen()" value="mall">Mall<br>
+        <input type="radio" name="ii_type" onchange="return ii_chosen()" value="exhibitioncentre">Exhibition Centre<br>
+        <input type="radio" name="ii_type" onchange="return ii_chosen()" value="university">University<br>
+        <input type="radio" name="ii_type" onchange="return ii_chosen()" value="museum">Museum<br>
+        Name(Chinese): <input type="text" name="i_name_cn"><br>
+        Name(English): <input type="text" name="i_name_en"><br>
+    </div><br>
+	<div id="additional">
+        District:
+        <select name="i_district">
+            <optgroup label="Hong Kong Island">
+                <option value="east">東區</option>
+                <option value="north">北區</option>
+                <option value="south">南區</option>
+                <option value="wanchai">灣仔區</option>
+            </optgroup>
+            <optgroup label="Kowloon">
+                <option value="shamshuipo">深水埗區</option>
+                <option value="kowlooncity">九龍城區</option>
+                <option value="kwuntong">觀塘區</option>
+                <option value="wongtaisin">黃大仙區</option>
+                <option value="yautsimmong">油尖旺區</option>
+            </optgroup>
+            <optgroup label="New Territories">
+                <option value="kwaitsing">葵青區</option>
+                <option value="saikung">西貢區</option>
+                <option value="shatin">沙田區</option>
+                <option value="taipo">大埔區</option>
+                <option value="tsuenwan">荃灣區</option>
+                <option value="tuenmun">屯門區</option>
+                <option value="yuenlong">元朗區</option>
+            </optgroup>
+            <option value="island">離島</option>
+        </select><br>
+        Features:<br>
+        <input type="checkbox" name="i_feature" value="car">Carpark<br>
+        <input type="checkbox" name="i_feature" value="kid">Kid-Friendly<br>
+        <input type="checkbox" name="i_feature" value="mtr">MTR Access<br>
+        Total Area: <input type="text" name="i_area"><br>
+        Number of Parking Space: <input type="number" name="i_parking"><br>
+        Address(Chinese):	<input type="text" name="i_address_cn"><br>
+        Address(English): 	<input type="text" name="i_address_en"><br>
+        Website: 	<input type="text" name="i_website"><br>
+        Email: 	<input type="text" name="i_email"><br>
+        Phone:	<input type="text" name="i_phone"><br>
+	</div>
+    <div id="ix_mall">
+        Number of Shops: <input type="text" name="mall_shopnumber"><br>
+    </div>
+    <div id="ix_museum">
+        Type of Museum: 	<input type="text" name="museum_type"><br>
+    </div>
+</div>
+
+
+
+    
+<div id="counter">
+    <div>
+        Type of Infrastructure:<br>
+        <input type="radio" name="ci_type" onchange=" return ci_chosen()" value="mall">Mall<br>
+        <input type="radio" name="ci_type" onchange=" return ci_chosen()" value="exhibitioncentre">Exhibition Centre<br>
+        <input type="radio" name="ci_type" onchange=" return ci_chosen()" value="university">University<br>
+        <input type="radio" name="ci_type" onchange=" return ci_chosen()" value="museum">Museum<br>
+        Name(Infrastructure): (sugegstions to be shown later)<input type="text" name="i_name_en"><br>
+        Counter Keyword: (suggestions to be shown)<input type="text" name="i_name_en"><br>
+        Name(Counter):<input id="c_name" type="text" name="name"><br>
+        Price Range:
+        <select name="price_range">
+            <option value="0">N/A</option>
+            <option value="1">Below $50</option>
+            <option value="2">$50-$100</option>
+            <option value="3">$100-$200</option>
+            <option value="4">$200-$400</option>
+            <option value="4">Above $400</option>
+        </select><br>
+    </div>
+
+    <div id="c_mall">
+        Categories: 
+        <select name="i_district">
+            <optgroup label="Facility">
+                <option value="ic">Information Centre</option>
+                <option value="ic">Toilets</option>
+                <option value="ic">Baby-Sitting Room</option>
+            </optgroup>
+            <optgroup label="Service">
+                <option value="ic">Banks</option>
+            </optgroup>
+            <optgroup label="Food">
+                <option value="ic">Asian</option>
+                <option value="ic">Western</option>
+                <option value="ic">Exotic</option>
+            </optgroup>
+            <option value="ic">Sports</option>
+            <option value="ic">Cosmetics</option>
+            <option value="ic">Asian</option>
+            <option value="ic">Culture</option>
+            <option value="ic">Children</option>
+            <option value="ic">Entertainment</option>
+            <option value="ic">Electronics</option>
+            <option value="ic">Office</option>
+        </select><br>
+    </div>
+
+    <div id="c_exhibitioncentre">
+        Categories: 
+        <select name="i_district">
+            <optgroup label="Facility">
+                <option value="ic">Information Centre</option>
+                <option value="ic">Toilets</option>
+                <option value="ic">Baby-Sitting Room</option>
+            </optgroup>
+            <option value="ic">Banks</option>
+            <option value="ic">Hall</option>
+            <option value="ic">Shops</option>
+            <option value="ic">Food</option>
+            <option value="ic">Office</option>
+        </select><br>
+    </div>
+
+    <div id="c_university">
+        Categories: 
+        <select name="i_district">
+            <optgroup label="Facility">
+                <option value="ic">Information Centre</option>
+                <option value="ic">Toilets</option>
+                <option value="ic">Baby-Sitting Room</option>
+            </optgroup>
+            <option value="ic">Banks</option>
+            <option value="ic">Lecture Hall</option>
+            <option value="ic">Assembly Hall</option>
+            <option value="ic">Labs</option>
+            <option value="ic">Moot Court</option>
+            <option value="ic">Shops</option>
+            <option value="ic">Food</option>
+            <option value="ic">Office</option>
+            <option value="ic">Sports</option>
+            <option value="ic">Library</option>
+            <option value="ic">Co-Op Space</option>
+        </select><br>
+    </div>
+
+    <div id="c_museum">
+        Categories: 
+        <select name="i_district">
+            <optgroup label="Facility">
+                <option value="ic">Information Centre</option>
+                <option value="ic">Toilets</option>
+                <option value="ic">Baby-Sitting Room</option>
+            </optgroup>
+            <option value="ic">Shops</option>
+            <option value="ic">Food</option>
+            <option value="ic">Office</option>
+            <option value="ic">Library</option>
+        </select>
+    </div>
+</div>
+
+
+    <input type="submit" value="Input">
+</form>
+</body>
+</html>

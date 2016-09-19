@@ -1,0 +1,34 @@
+body{
+    font-family: Arial;
+    line-height: 130%;
+}
+#initial{
+   background-color: lightgray;
+    display: block;
+}
+#infrastructure{
+    background-color: lightblue;
+}
+#counter{
+    background-color: lightpink;
+    display: none;
+}
+#c_mall{
+    display: none;
+}
+#c_university{
+    display: none;
+}
+#c_exhibitioncentre{
+    display: none;
+}
+#c_museum{
+    background-color: lightpink;
+    display: none;
+}
+#ix_mall{
+    display: none;
+}
+#ix_museum{
+    display: none;
+}
